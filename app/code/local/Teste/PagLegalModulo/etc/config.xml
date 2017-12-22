@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<config>
+    <modules>
+        <Teste_PagLegalModulo>
+            <version>1.0.0.0</version>
+        </Teste_PagLegalModulo>
+    </modules>
+
+    <global>
+        <fieldsets>
+            <sales_convert_quote_payment>
+                <cpf>
+                    <to_order_payment>*</to_order_payment>
+                </cpf>
+            </sales_convert_quote_payment>
+        </fieldsets>
+
+        <helpers>
+            <paglegalmodulo>
+                <class>Teste_PagLegalModulo_Helper</class>
+            </paglegalmodulo>
+        </helpers>
+
+        <blocks>
+            <paglegalmodulo>
+                <class>Teste_PagLegalModulo_Block</class>
+            </paglegalmodulo>
+        </blocks>
+
+        <models>
+            <paglegalmodulo>
+                <class>Teste_PagLegalModulo_Model</class>
+            </paglegalmodulo>
+        </models>
+
+    </global>
+
+    <default>
+        <payment>
+            <paglegalmodulo>
+                <active>1</active>
+                <model>paglegalmodulo/paglegalmodulomodel</model>
+                <order_status>pending</order_status>
+                <title>PagLegal</title>
+                <allowspecific>0</allowspecific>
+                <payment_action>sale</payment_action>
+            </paglegalmodulo>
+        </payment>
+    </default>
+
+    <frontend>
+        <routers>
+            <paglegalmodulo>
+                <use>standard</use>
+                <args>
+                    <module>Teste_PagLegalModulo</module>
+                    <frontName>PagLegalModulo</frontName>
+                </args>
+            </paglegalmodulo>
+        </routers>
+    </frontend>
+
+
+</config>

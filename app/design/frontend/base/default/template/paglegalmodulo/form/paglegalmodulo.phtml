@@ -1,0 +1,12 @@
+
+<div class="form-list" id="paglegalmodulo_form_<?php echo $this->getMethodCode() ?>" style="display:none;">
+    <div>
+        <label><?php echo $this->__('CPF:') ?>*</label>
+        <span>
+      <input type="text" title="<?php echo $this->__('CPF') ?>" maxlength="11" name="payment[cpf]" value="<?php echo $this->htmlEscape($this->getInfoData('cpf')) ?>" />
+    </span>
+    </div>
+</div>
+<div>
+    <?php echo $this->getMethod()->getConfigData('message');?>
+</div>
